@@ -14,11 +14,6 @@ const loadPage = (id: string) => {
 
 const RouterList: Array<iRouter> = [
   {
-    path: ROUTES.SignIn,
-    element: loadPage('SignIn'),
-    needLogin: false,
-  },
-  {
     path: ROUTES.About,
     element: loadPage('About'),
     needLogin: false,
@@ -28,7 +23,7 @@ const RouterList: Array<iRouter> = [
     element: (
       <Navigate
         replace
-        to={ROUTES.SignIn}
+        to={ROUTES.About}
       />
     ),
     needLogin: true,
@@ -38,7 +33,7 @@ const RouterList: Array<iRouter> = [
     element: (
       <Navigate
         replace
-        to={ROUTES.SignIn}
+        to={ROUTES.About}
       />
     ),
     needLogin: true,

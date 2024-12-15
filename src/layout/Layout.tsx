@@ -1,6 +1,8 @@
-import './Layout.scss';
+/* eslint-disable prettier/prettier */
 import { use100vh } from 'react-div-100vh';
+import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
+import './Layout.scss';
 
 interface IProps {
   children?: React.ReactNode;
@@ -21,9 +23,12 @@ const Layout = (props: IProps) => {
   );
 };
 
-const LayoutHeader = (props: IProps) => {
-  const { children } = props;
-  return <header className="layout__header">{children}</header>;
+const LayoutHeader = () => {
+  return (
+    <header className="layout__header">
+      <Header />
+    </header>
+  );
 };
 
 const LayoutPageHeader = (props: IProps) => {
