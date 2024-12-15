@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Suspense, lazy, useMemo } from 'react';
 import queryString from 'query-string';
 import { Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
@@ -44,7 +45,6 @@ export default RouterList;
 export function useRouter() {
   const params = useParams();
   const location = useLocation();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const navigate = useNavigate() as any;
 
   return useMemo(() => {

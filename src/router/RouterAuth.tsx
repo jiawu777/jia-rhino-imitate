@@ -78,7 +78,7 @@ const RouterAuth = () => {
     return (
       <Navigate
         replace
-        to={`${ROUTES.SignIn}`}
+        to={`${ROUTES.About}`}
         state={state}
       />
     );
