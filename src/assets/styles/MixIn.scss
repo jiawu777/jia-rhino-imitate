@@ -1,0 +1,16 @@
+@mixin hide-scrollbar {
+  // 隱藏瀏覽器預設的滾動條
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // IE, Edge
+  & {
+    -ms-overflow-style: none;
+  }
+
+  // Firefox
+  & {
+    scrollbar-width: none;
+  }
+}
