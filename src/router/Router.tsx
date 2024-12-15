@@ -19,11 +19,16 @@ const RouterList: Array<iRouter> = [
     needLogin: false,
   },
   {
+    path: ROUTES.About,
+    element: loadPage('About'),
+    needLogin: false,
+  },
+  {
     path: '/',
     element: (
       <Navigate
-        to={ROUTES.SignIn}
         replace
+        to={ROUTES.SignIn}
       />
     ),
     needLogin: true,
@@ -32,8 +37,8 @@ const RouterList: Array<iRouter> = [
     path: '*',
     element: (
       <Navigate
-        to={ROUTES.SignIn}
         replace
+        to={ROUTES.SignIn}
       />
     ),
     needLogin: true,

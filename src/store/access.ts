@@ -20,8 +20,4 @@ const rememberAtom = atomWithStorage<Record<string, string> | null>(
   null
 );
 
-export {
-  LOCAL_STORAGE_KEY,
-  authTokenAtom,
-  rememberAtom,
-};
+export { LOCAL_STORAGE_KEY, authTokenAtom, rememberAtom };

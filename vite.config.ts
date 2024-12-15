@@ -1,12 +1,12 @@
+import path from 'path';
+import fs from 'fs';
 import react from '@vitejs/plugin-react-swc';
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import dynamicImport from 'vite-plugin-dynamic-import';
-import path from 'path';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import legacy from '@vitejs/plugin-legacy';
-import fs from 'fs';
 
 const https = () => {
   const useHttps = (process.env.npm_lifecycle_event || '').includes(':https');

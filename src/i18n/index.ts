@@ -1,8 +1,8 @@
 import i18n from 'i18next';
 import type { InitOptions } from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { setDocumentTitle } from '@/utils/setDocumentTitle';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { setDocumentTitle } from '@/utils/setDocumentTitle';
 // import commonEN from './locales/en/common.json';
 import commonCN from './locales/zh-CN/common.json';
 

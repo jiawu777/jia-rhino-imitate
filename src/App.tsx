@@ -9,7 +9,7 @@ const App = () => {
       <ErrorBoundary>
         <GlobalProvider>
           <HashRouter>
-            <RouterAuth></RouterAuth>
+            <RouterAuth />
           </HashRouter>
         </GlobalProvider>
       </ErrorBoundary>

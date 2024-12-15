@@ -1,9 +1,9 @@
-import RouterList from './';
 import { Navigate, RouteObject, useLocation, useRoutes, useSearchParams } from 'react-router-dom';
-import { ROUTES } from './routes';
 import { useAtom } from 'jotai';
-import { authTokenAtom } from '@/store';
 import { useEffect, useRef } from 'react';
+import { authTokenAtom } from '@/store';
+import { ROUTES } from './routes';
+import RouterList from './';
 
 const routerList: Array<iRouter> = RouterList ? RouterList : [];
 
@@ -77,8 +77,8 @@ const RouterAuth = () => {
     console.debug('[Render Guard] 需登入，跳轉登入頁面');
     return (
       <Navigate
-        to={`${ROUTES.SignIn}`}
         replace
+        to={`${ROUTES.SignIn}`}
         state={state}
       />
     );

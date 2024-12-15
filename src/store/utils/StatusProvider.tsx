@@ -1,9 +1,9 @@
 import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { queryClientAtom } from 'jotai-tanstack-query';
 import { Provider as JotaiProvider, createStore } from 'jotai';
-import { HydrateAtomsProvider } from './HydrateAtomsProvider';
 import { storageRetryAtom } from '@/store';
 import { APIBasePathArr } from '@/constants/common';
+import { HydrateAtomsProvider } from './HydrateAtomsProvider';
 
 const retryTimes = import.meta.env.VITE_APP_RETRY_TIMES
   ? Number(import.meta.env.VITE_APP_RETRY_TIMES)
