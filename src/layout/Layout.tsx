@@ -1,6 +1,6 @@
 import './Layout.scss';
 import { use100vh } from 'react-div-100vh';
-import Footer from '@/components/Footer';
+import Footer from '@/components/common/Footer';
 
 interface IProps {
   children?: React.ReactNode;
