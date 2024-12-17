@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import './PageHeader.scss';
 import bgHeader from '@images/pageHeader/1.jpg';
 

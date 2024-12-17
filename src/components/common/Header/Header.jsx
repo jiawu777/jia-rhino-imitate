@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { NavigationList } from '@/constants/conNavigation';
 import './Header.scss';
 import logoFull from '@images/Header/logoFull.svg';
@@ -8,8 +7,9 @@ const Header = () => {
     return (
       <li
         key={item.id}
-        className={`header__menuItem ${index + (1 % 2) === 0 ? 'header__menuItem--even' : 'header__menuItem--odd'
-          }`}
+        className={`header__menuItem ${
+          index + (1 % 2) === 0 ? 'header__menuItem--even' : 'header__menuItem--odd'
+        }`}
       >
         {item.title}
       </li>

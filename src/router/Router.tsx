@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Suspense, lazy, useMemo } from 'react';
 import queryString from 'query-string';
 import { Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';

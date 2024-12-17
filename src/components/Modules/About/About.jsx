@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { sectionList, intro } from '@/constants/conAbout';
 import './About.scss';
 

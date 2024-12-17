@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { use100vh } from 'react-div-100vh';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
