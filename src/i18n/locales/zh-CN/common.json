@@ -1,6 +1,6 @@
 {
   "i18nTest": "i18n test",
-  "version": "当前版本号 v{{version}}",
+  "version": "當前版本號 v{{version}}",
   "document": {
     "title": "嘉"
   }

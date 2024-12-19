@@ -19,6 +19,11 @@ const RouterList: Array<iRouter> = [
     needLogin: false,
   },
   {
+    path: ROUTES.Policy,
+    element: loadPage('Policy'),
+    needLogin: false,
+  },
+  {
     path: '/',
     element: (
       <Navigate
