@@ -5,8 +5,6 @@ import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation().pathname.toString();
-  console.log(location);
-
   const forMapNavigationItem = (item, index) => {
     return (
       <li
@@ -24,6 +22,8 @@ const Header = () => {
       ? NavigationListPolicy.map(forMapNavigationItem)
       : NavigationListAbout.map(forMapNavigationItem);
 
+  const button = location === '/policy' ? '' : `來去逛逛 →`;
+
   return (
     <section className="header">
       <div className="header__wrapper">
@@ -32,7 +32,13 @@ const Header = () => {
         </div>
         <div className="header__area  header__area--tool">
           <ul className="header__menuList">{child}</ul>
-          <button className="btn">來去逛逛 →</button>
+          <button
+            className={`header__btn ${
+              location === '/policy' ? 'header__btn--policy' : 'header__btn--about'
+            }`}
+          >
+            {button}
+          </button>
         </div>
       </div>
     </section>

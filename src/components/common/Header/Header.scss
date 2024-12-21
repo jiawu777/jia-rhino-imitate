@@ -48,7 +48,8 @@
     color: #5f6858;
   }
 
-  .btn {
+&__btn{
+  &--about{
     background-color: #ffef00;
     font-family: 'Inter', Sans-serif;
     font-size: 16px;
@@ -58,4 +59,8 @@
     padding: 8px 16px 8px 16px;
     border-width: 0px;
   }
+  &--policy{
+    display:none;
+  }
+}
 }
