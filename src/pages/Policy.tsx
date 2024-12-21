@@ -1,14 +1,10 @@
-import { Layout, LayoutHeader, LayoutMain, LayoutFooter, LayoutPageHeader } from '@/layout/Layout';
-import PageHeader from '@/components/common/PageHeader';
+import { Layout, LayoutHeader, LayoutMain, LayoutFooter } from '@/layout/Layout';
 import Policy from '@/components/Modules/Policy';
 
 const PagePolicy = () => {
   return (
     <Layout>
       <LayoutHeader />
-      <LayoutPageHeader>
-        <PageHeader />
-      </LayoutPageHeader>
       <LayoutMain>
         <Policy />
       </LayoutMain>

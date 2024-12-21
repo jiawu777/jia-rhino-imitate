@@ -1,8 +1,12 @@
-import { NavigationList } from '@/constants/conNavigation';
+import { NavigationListAbout, NavigationListPolicy } from '@/constants/conNavigation';
 import './Header.scss';
 import logoFull from '@images/Header/logoFull.svg';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation().pathname.toString();
+  console.log(location);
+
   const forMapNavigationItem = (item, index) => {
     return (
       <li
@@ -15,8 +19,11 @@ const Header = () => {
       </li>
     );
   };
+  const child =
+    location === '/policy'
+      ? NavigationListPolicy.map(forMapNavigationItem)
+      : NavigationListAbout.map(forMapNavigationItem);
 
-  const child = NavigationList.map(forMapNavigationItem);
   return (
     <section className="header">
       <div className="header__wrapper">
