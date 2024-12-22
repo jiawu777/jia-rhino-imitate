@@ -1,3 +1,5 @@
+import { ROUTES } from '@/router';
+
 const NavigationListAbout = [
   {
     id: 'n1',
@@ -11,6 +13,16 @@ const NavigationListAbout = [
   {
     id: 'n3',
     title: '材料永續',
+  },
+  {
+    id: 'n4',
+    title: 'About',
+    path: ROUTES.About,
+  },
+  {
+    id: 'n5',
+    title: 'Policy',
+    path: ROUTES.Policy,
   },
 ];
 
@@ -39,6 +51,16 @@ const NavigationListPolicy = [
   {
     id: 'n6',
     title: '永續行動',
+  },
+  {
+    id: 'n7',
+    title: 'About',
+    path: ROUTES.About,
+  },
+  {
+    id: 'n8',
+    title: 'Policy',
+    path: ROUTES.Policy,
   },
 ];
 

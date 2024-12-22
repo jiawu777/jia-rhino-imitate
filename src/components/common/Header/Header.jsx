@@ -1,10 +1,14 @@
+import { useState } from 'react';
+import { changeLanguage } from 'i18next';
+import { useRouter } from '@/router';
+import { LanguageType } from '@/i18n';
 import { NavigationListAbout, NavigationListPolicy } from '@/constants/conNavigation';
 import './Header.scss';
 import logoFull from '@images/Header/logoFull.svg';
-import { useLocation } from 'react-router-dom';
 
 const Header = () => {
-  const location = useLocation().pathname.toString();
+  const router = useRouter();
+  const { pathname: location, navigate } = router;
   const forMapNavigationItem = (item, index) => {
     return (
       <li
@@ -12,6 +16,7 @@ const Header = () => {
         className={`header__menuItem ${
           index + (1 % 2) === 0 ? 'header__menuItem--even' : 'header__menuItem--odd'
         }`}
+        onClick={() => navigate(item.path)}
       >
         {item.title}
       </li>
@@ -24,6 +29,17 @@ const Header = () => {
 
   const button = location === '/policy' ? '' : `來去逛逛 →`;
 
+  const [lang, setLang] = useState(LanguageType.ZH_CN);
+  const handleChangeLanguage = () => {
+    let newLang = '';
+    if (lang === LanguageType.EN) {
+      newLang = LanguageType.ZH_CN;
+    } else {
+      newLang = LanguageType.EN;
+    }
+    setLang(newLang);
+    changeLanguage(newLang);
+  };
   return (
     <section className="header">
       <div className="header__wrapper">
@@ -39,6 +55,8 @@ const Header = () => {
           >
             {button}
           </button>
+
+          <button onClick={handleChangeLanguage}>切語系</button>
         </div>
       </div>
     </section>

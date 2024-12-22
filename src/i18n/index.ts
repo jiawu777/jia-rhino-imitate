@@ -3,16 +3,23 @@ import type { InitOptions } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { setDocumentTitle } from '@/utils/setDocumentTitle';
-// import commonEN from './locales/en/common.json';
+import commonEN from './locales/en/common.json';
 import commonCN from './locales/zh-CN/common.json';
+import policyEN from './locales/en/policy.json';
+import policyCN from './locales/zh-CN/policy.json';
 
 export enum LanguageType {
-  // EN = 'en',
+  EN = 'en',
   ZH_CN = 'zh-CN',
 }
 export const resources = {
   [LanguageType.ZH_CN]: {
     common: commonCN,
+    policy: policyCN,
+  },
+  [LanguageType.EN]: {
+    common: commonEN,
+    policy: policyEN,
   },
 } as const;
 
