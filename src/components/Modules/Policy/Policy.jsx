@@ -1,5 +1,6 @@
 import { usePolicyData } from '@/hooks/usePolicyData';
 import './Policy.scss';
+import { useTranslation } from 'react-i18next';
 
 const Policy = () => {
   const { PolicyList } = usePolicyData();

@@ -6,6 +6,7 @@ declare module 'i18next' {
   interface CustomTypeOptions {
     // custom namespace type if you changed it
     // custom resources type
-    resources: (typeof resources)[LanguageType.ZH_CN];
+    resources: (typeof resources)[LanguageType.ZH_TW];
+    resources: (typeof resources)[LanguageType.EN_US];
   }
 }
