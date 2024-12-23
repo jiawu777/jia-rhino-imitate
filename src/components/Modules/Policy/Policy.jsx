@@ -1,6 +1,5 @@
 import { usePolicyData } from '@/hooks/usePolicyData';
 import './Policy.scss';
-import { useTranslation } from 'react-i18next';
 
 const Policy = () => {
   const { PolicyList } = usePolicyData();
@@ -15,7 +14,14 @@ const Policy = () => {
     );
   };
   const child = PolicyList.map(forMapRule);
-  return <ul>{child}</ul>;
+  return (
+    <div className="policy">
+      <div className="policy__wrapper">
+        <h1 className="policy__title">123</h1>
+        <ul>{child}</ul>
+      </div>
+    </div>
+  );
 };
 
 export default Policy;

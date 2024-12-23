@@ -1,0 +1,13 @@
+.policy{
+    display: flex;
+    justify-content: center;
+    &__wrapper{
+        
+        width: 600px;
+        background-color: red;
+    }
+    &__title{
+        font-size: 128px;
+        line-height: 33px;
+    }
+}
