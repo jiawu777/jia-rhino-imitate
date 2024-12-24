@@ -9,10 +9,12 @@ const NavigationListAbout = [
   {
     id: 'n2',
     title: '環境科技',
+    path: '',
   },
   {
     id: 'n3',
     title: '材料永續',
+    path: '',
   },
   {
     id: 'n4',
@@ -35,22 +37,27 @@ const NavigationListPolicy = [
   {
     id: 'n2',
     title: '型號地圖',
+    path: '',
   },
   {
     id: 'n3',
     title: '產品',
+    path: '',
   },
   {
     id: 'n4',
     title: '設計款工坊',
+    path: '',
   },
   {
     id: 'n5',
     title: '客製化設計',
+    path: '',
   },
   {
     id: 'n6',
     title: '永續行動',
+    path: '',
   },
   {
     id: 'n7',
