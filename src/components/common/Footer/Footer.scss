@@ -1,5 +1,23 @@
-.footer__wrapper {
+.footer{
+
+&__wrapper {
+  list-style: none;
   height: 52.5px;
+  width:100%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  @include tablet{
+    flex-flow: row nowrap;
+  }
+
+  @include pad{
+    flex-flow: row wrap;
+  }
+
+  @include phone{
+    flex-flow: row wrap;
+  }
+}
+
 }

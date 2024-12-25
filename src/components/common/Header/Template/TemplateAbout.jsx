@@ -10,7 +10,6 @@ const TemplateAbout = () => {
   const router = useRouter();
   const { navigate } = router;
   const forMapNavigationItem = (item, index) => {
-    // const path='/about'
     return (
       <li
         key={item.id}

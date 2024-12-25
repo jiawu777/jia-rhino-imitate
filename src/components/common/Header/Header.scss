@@ -1,8 +1,10 @@
+
+
 .header {
   &__wrapper {
     height: 80px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     flex-grow: 1;
     align-items: center;
     align-content: stretch;
@@ -11,20 +13,27 @@
     padding-right: 28px;
     padding-bottom: 0px;
     padding-left: 130px;
+    @include pad{
+      flex-flow: row nowrap;
+      justify-content:start;
+      padding-top: 0px;
+    padding-right: 28px;
+    padding-bottom: 0px;
+    padding-left: 28px;
+    }
+    @include phone{
+ 
+    }
   }
-
   &__area {
     height: 100%;
-
+    display: flex;
+    flex-flow: row nowrap;
     &--tool {
-      display: flex;
-      flex-flow: row wrap;
       align-items: center;
     }
 
     &--logo {
-      display: flex;
-      flex-flow: row wrap;
       align-items: center;
     }
   }
@@ -46,6 +55,13 @@
     text-decoration: none;
     line-height: 1.5px;
     color: #5f6858;
+    @include pad{
+      padding: 40px 10px;
+    }
+
+    @include phone{
+      display:none;
+    }
   }
 
 &__btn{
