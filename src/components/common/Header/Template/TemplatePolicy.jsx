@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { changeLanguage } from 'i18next';
 import { useRouter } from '@/router';
 import { LanguageType } from '@/i18n';
-import { NavigationListPolicy } from '@/constants/conNavigation';
+import { NavigationListPolicy, NavigationPic } from '@/constants/conNavigation';
 import '../Header.scss';
 import logoFull from '@images/Header/logoFull.svg';
 
@@ -22,7 +22,20 @@ const TemplatePolicy = () => {
       </li>
     );
   };
-  const child = NavigationListPolicy.map(forMapNavigationItem);
+  const childNav = NavigationListPolicy.map(forMapNavigationItem);
+
+  const forMapNavigationPic = (item) => {
+    return (
+      <img
+        key={item.id}
+        className="header__menuList--icon"
+        src={item.img}
+        width="24px"
+        height="24px"
+      />
+    );
+  };
+  const childPic = NavigationPic.map(forMapNavigationPic);
 
   const buttoncl = `切換語系`;
   const [lang, setLang] = useState(LanguageType.ZH_CN);
@@ -43,7 +56,8 @@ const TemplatePolicy = () => {
           <img src={logoFull} />
         </div>
         <div className="header__area  header__area--tool">
-          <ul className="header__menuList">{child}</ul>
+          <ul className="header__menuList">{childNav}</ul>
+          <ul className="header__menuList">{childPic}</ul>
           <button
             className="header__btn header__btn--changelanguage"
             onClick={handleChangeLanguage}

@@ -71,4 +71,11 @@ const NavigationListPolicy = [
   },
 ];
 
-export { NavigationListAbout, NavigationListPolicy };
+const NavigationPic = [
+  { id: 'n1', img: 'src/assets/images/Header/policyHeaderImg/imgh1.png' },
+  { id: 'n2', img: 'src/assets/images/Header/policyHeaderImg/imgh2.png' },
+  { id: 'n3', img: 'src/assets/images/Header/policyHeaderImg/imgh3.png' },
+  { id: 'n4', img: 'src/assets/images/Header/policyHeaderImg/imgh4.png' },
+];
+
+export { NavigationListAbout, NavigationListPolicy, NavigationPic };
