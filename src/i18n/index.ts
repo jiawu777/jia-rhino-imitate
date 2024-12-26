@@ -4,9 +4,9 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { setDocumentTitle } from '@/utils/setDocumentTitle';
 import commonEN from './locales/en/common.json';
-import commonCN from './locales/zh-CN/common.json';
+import commonCN from './locales/zh-TW/common.json';
 import policyEN from './locales/en/policy.json';
-import policyCN from './locales/zh-CN/policy.json';
+import policyCN from './locales/zh-TW/policy.json';
 
 export enum LanguageType {
   EN = 'en',
