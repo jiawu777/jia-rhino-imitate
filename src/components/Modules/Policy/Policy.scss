@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     background-color: $colorWhite;
-    
+
     &__wrapper{
         width:600px;
     
@@ -10,6 +10,11 @@
         justify-content: center;
         flex-flow: column wrap;
         margin: 100px 211.5px 96px;
+
+        @include phone{
+            margin: 100px 0px 96px;
+            padding: 0px 30px;
+        }
     
     }
     &__pageTitle{
