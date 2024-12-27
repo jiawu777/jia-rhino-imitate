@@ -1,7 +1,4 @@
-import { useState } from 'react';
-import { changeLanguage } from 'i18next';
 import { useRouter } from '@/router';
-import { LanguageType } from '@/i18n';
 import { NavigationListAbout } from '@/constants/conNavigation';
 import '../Header.scss';
 import logoFull from '@images/Header/logoFull.svg';
@@ -10,13 +7,11 @@ import logoShort from '@images/Header/logoShort.svg';
 const TemplateAbout = () => {
   const router = useRouter();
   const { navigate } = router;
-  const forMapNavigationItem = (item, index) => {
+  const forMapNavigationItem = (item) => {
     return (
       <li
         key={item.id}
-        className={`header__menuItem ${
-          index + (1 % 2) === 0 ? 'header__menuItem--even' : 'header__menuItem--odd'
-        }`}
+        className={`header__menuItem`}
         onClick={() => navigate(item.path)}
       >
         {item.title}
@@ -26,20 +21,6 @@ const TemplateAbout = () => {
   const child = NavigationListAbout.map(forMapNavigationItem);
 
   const buttongo = `來去逛逛 →`;
-  const buttoncl = `切換語系`;
-
-  const [lang, setLang] = useState(LanguageType.ZH_CN);
-
-  const handleChangeLanguage = () => {
-    let newLang = '';
-    if (lang === LanguageType.EN) {
-      newLang = LanguageType.ZH_CN;
-    } else {
-      newLang = LanguageType.EN;
-    }
-    setLang(newLang);
-    changeLanguage(newLang);
-  };
 
   return (
     <section className="header">
@@ -47,11 +28,11 @@ const TemplateAbout = () => {
         <div className="header__area header__area--logo">
           <picture>
             <source
-              media="(min-width:992px)"
+              media="(min-width:1200px)"
               srcSet={logoFull}
             />
             <source
-              media="(min-width:415px)"
+              media="(min-width:1px)"
               srcSet={logoShort}
             />
             <img
@@ -63,12 +44,6 @@ const TemplateAbout = () => {
         <div className="header__area  header__area--tool">
           <ul className="header__menuList">{child}</ul>
           <button className="header__btn header__btn--about">{buttongo}</button>
-          <button
-            className="header__btn header__btn--changelanguage"
-            onClick={handleChangeLanguage}
-          >
-            {buttoncl}
-          </button>
         </div>
       </div>
     </section>

@@ -5,19 +5,35 @@
   height: 52.5px;
   width:100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  @include tablet{
-    flex-flow: row nowrap;
-  }
-
+  padding: 0px 28px;
   @include pad{
-    flex-flow: row wrap;
+    // justify-content: center;
   }
-
   @include phone{
-    flex-flow: row wrap;
+    flex-flow: column wrap;
   }
 }
 
+&__info{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+&__btn{
+  &--changelanguage{
+  display: flex;
+    flex-flow: column nowrap;
+    font-family: 'Inter', Sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 1.5px;
+    color: #5f6858;
+    border:0;
+    @include tablet{
+      display:none;
+    }
+ }
+}
 }
