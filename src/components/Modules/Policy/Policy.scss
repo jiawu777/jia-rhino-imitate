@@ -2,16 +2,16 @@
     display: flex;
     justify-content: center;
     background-color: $colorWhite;
-
+    padding-top: 80px;
     &__wrapper{
+  
         width:600px;
-    
         display: flex;
         justify-content: center;
         flex-flow: column wrap;
         margin: 100px 211.5px 96px;
 
-        @include phone{
+        @include pad{
             margin: 100px 0px 96px;
             padding: 0px 30px;
         }
@@ -21,6 +21,7 @@
         font-size: 28px;
         line-height: 33px;
         white-space: pre-wrap;
+        font-weight: bold;
         &--subtitle{
             font-size: 14px;
         }
