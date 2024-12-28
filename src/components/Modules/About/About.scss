@@ -26,20 +26,42 @@
     align-items: center;
     gap: 0px 40px;
     color: #3c4238;
+    @include pad{
+      flex-direction:column;
+      padding: 60px 20px 0px;
+    }
+    @include phone{
+      flex-direction:column;
+      padding: 60px 8px 0px;
+    }
 
     &--odd {
       flex-direction: row;
+      @include pad{
+        flex-direction:column;
+        gap:10px;
+      }
     }
 
     &--even {
       flex-direction: row-reverse;
+      @include pad{
+        flex-direction:column;
+        gap:10px;
+      }
     }
 
     &--end {
       background-color: #376242;
       color: #fcfcfe;
       background-image: cover;
+      @include pad{
+        flex-direction:column;
+        gap:10px;
+      }
     }
+
+    
   }
 
   &__desArea {
@@ -47,6 +69,9 @@
     flex-flow: column nowrap;
     max-width: 445px;
     width: 100%;
+    @include pad{
+      gap: 10px;
+    }
   }
 
   &__desLabel {
@@ -89,6 +114,12 @@
     color: #5f6858;
     padding: 80px 130px;
     background-color: #fcfcfe;
+    @include pad{
+      padding: 60px 20px 0px;
+    }
+    @include phone{
+      padding: 60px 8px 0px;
+    }
   }
 }
 
