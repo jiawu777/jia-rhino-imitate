@@ -25,7 +25,7 @@ const Footer = () => {
   const child = FooterTextItem.map(forMapFooterTextItem);
   return (
     <div className="footer__wrapper">
-      {child}
+      <div className="footer__info">{child}</div>
       <button
         className="footer__btn footer__btn--changelanguage"
         onClick={handleChangeLanguage}

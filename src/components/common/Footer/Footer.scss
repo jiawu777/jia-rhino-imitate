@@ -2,38 +2,40 @@
 
 &__wrapper {
   list-style: none;
-  height: 52.5px;
+  height: 76.61px;
   width:100%;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  line-height: 1.5;
   padding: 0px 28px;
   @include pad{
-    // justify-content: center;
+    justify-content:  space-around;
+    flex-flow: column-reverse wrap;
+
   }
   @include phone{
-    flex-flow: column wrap;
+    justify-content: center;
   }
 }
-
 &__info{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  white-space: pre-wrap;
+  @include pad{
+flex-flow: column wrap;
+  }
 }
 
 &__btn{
   &--changelanguage{
-  display: flex;
-    flex-flow: column nowrap;
+    display: flex;
     font-family: 'Inter', Sans-serif;
     font-size: 12px;
     text-decoration: none;
-    line-height: 1.5px;
     color: #5f6858;
     border:0;
-    @include tablet{
-      display:none;
-    }
  }
 }
 }
