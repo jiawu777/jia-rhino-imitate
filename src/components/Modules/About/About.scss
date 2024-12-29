@@ -90,6 +90,7 @@
   &__desTxt {
     margin: 0;
     padding: 0;
+    line-height: 1.5;
   }
 
   &__imgArea {
@@ -114,6 +115,7 @@
     color: #5f6858;
     padding: 80px 130px;
     background-color: #fcfcfe;
+    line-height: 1.5;
     @include pad{
       padding: 60px 20px 0px;
     }
