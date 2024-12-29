@@ -1,10 +1,11 @@
 import { useRouter } from '@/router';
-import { NavigationListPolicy, NavigationPic } from '@/constants/conNavigation';
+import { NavigationListPolicy, NavigationPic, cursorImg } from '@/constants/conNavigation';
 import './Header.scss';
 import logoFull from '@images/Header/logoFull.svg';
 import logoShort from '@images/Header/logoShort.svg';
 
 const Header = () => {
+  console.log({ cursorImg });
   const router = useRouter();
   const { navigate } = router;
   const forMapNavigationItem = (item) => {
@@ -52,6 +53,10 @@ const Header = () => {
           </picture>
         </div>
         <div className="header__area  header__area--tool">
+          {/* <img
+            className="header__cursor"
+            src={cursorImg}
+          /> */}
           <ul className="header__menuList">{childNav}</ul>
           <ul className="header__menuList">{childPic}</ul>
         </div>

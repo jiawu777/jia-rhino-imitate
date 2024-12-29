@@ -1,6 +1,8 @@
 
 
 .header {
+  cursor: default;
+
   &__wrapper {
     height: 80px;
     display: flex;
@@ -45,11 +47,14 @@
     align-items: center;
     justify-content: space-around;
     height: 80px;
+    cursor: url("src/assets/images/cursor.png") 2 2, pointer;
+
     &--icon{
       padding: 8px;
       gap: 5px;
       height: 36px;
       width: 36px;
+
     }
   }
 
