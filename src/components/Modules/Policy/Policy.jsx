@@ -2,7 +2,7 @@ import { usePolicyData } from '@/hooks/usePolicyData';
 import './Policy.scss';
 
 const Policy = () => {
-  const { PolicyList, policyTitle } = usePolicyData();
+  const { PolicyList, PolicyTitle } = usePolicyData();
 
   const forMapRule = (item) => {
     return (
@@ -17,8 +17,8 @@ const Policy = () => {
   return (
     <div className="policy">
       <div className="policy__wrapper">
-        <h1 className="policy__pageTitle">{policyTitle}</h1>
-        <h2 className="policy__pageTitle policy__pageTitle--subtitle">{policyTitle}</h2>
+        <h1 className="policy__pageTitle">{PolicyTitle}</h1>
+        <h2 className="policy__pageTitle policy__pageTitle--subtitle">{PolicyTitle}</h2>
         <ul className="policy__text">{child}</ul>
       </div>
     </div>

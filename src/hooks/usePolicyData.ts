@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 const usePolicyData = () => {
   const { t } = useTranslation();
-  const policyTitle = t('policy:pageTitle');
+  const PolicyTitle = t('policy:pageTitle');
   const PolicyList = [
     {
       id: 'p1',
@@ -62,7 +62,7 @@ const usePolicyData = () => {
   ];
   return {
     PolicyList,
-    policyTitle,
+    PolicyTitle,
   };
 };
 

@@ -10,10 +10,10 @@ import policyCN from './locales/zh-TW/policy.json';
 
 export enum LanguageType {
   EN = 'en',
-  ZH_CN = 'zh-CN',
+  ZH_TW = 'zh-CN',
 }
 export const resources = {
-  [LanguageType.ZH_CN]: {
+  [LanguageType.ZH_TW]: {
     common: commonCN,
     policy: policyCN,
   },
@@ -25,9 +25,9 @@ export const resources = {
 
 const initOptions: InitOptions = {
   resources,
-  fallbackLng: LanguageType.ZH_CN,
-  // preload: [LanguageType.ZH_CN, LanguageType.EN],
-  preload: [LanguageType.ZH_CN],
+  fallbackLng: LanguageType.ZH_TW,
+  // preload: [LanguageType.ZH_TW, LanguageType.EN],
+  preload: [LanguageType.ZH_TW],
   interpolation: {
     escapeValue: false,
   },
@@ -38,7 +38,7 @@ i18n
   .use(LanguageDetector)
   .init(initOptions)
   .then(() => {
-    document.documentElement.lang = i18n.resolvedLanguage ?? LanguageType.ZH_CN;
+    document.documentElement.lang = i18n.resolvedLanguage ?? LanguageType.ZH_TW;
     setDocumentTitle();
   });
 
