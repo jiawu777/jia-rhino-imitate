@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   line-height: 1.5;
-  padding: 0px 28px;
+  padding: 8px 28px;
   @include pad{
     justify-content:  space-around;
     flex-flow: column-reverse wrap;
@@ -29,7 +29,7 @@ flex-flow: column wrap;
 }
 
 &__btn{
-  &--changelanguage{
+  &--changeLanguage{
     display: flex;
     font-family: 'Inter', Sans-serif;
     font-size: 12px;

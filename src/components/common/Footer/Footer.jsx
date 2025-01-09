@@ -5,13 +5,7 @@ import { useFooterData } from '@/hooks/useFooterData';
 import './Footer.scss';
 
 const Footer = () => {
-  const { FooterCompany, FooterCopyright } = useFooterData();
-  console.log(FooterCompany, FooterCopyright);
-  // const forMapFooterTextItem = (item, index) => {
-  //   return <li key={index}>{item}</li>;
-  // };
-
-  const buttoncl = `切換語系`;
+  const { FooterCompany, FooterCopyright, FooterButton } = useFooterData();
   const [lang, setLang] = useState(LanguageType.ZH_TW);
   const handleChangeLanguage = () => {
     let newLang = '';
@@ -23,18 +17,18 @@ const Footer = () => {
     setLang(newLang);
     changeLanguage(newLang);
   };
-  // const child = FooterTextItem.map(forMapFooterTextItem);
+
   return (
     <div className="footer__wrapper">
       <div className="footer__info">
-        {FooterCompany}
-        {FooterCopyright}
+        <div className="footer__info footer__info--company"> {FooterCompany}</div>
+        <div className="footer__info footer__info--copyright">{FooterCopyright}</div>
       </div>
       <button
-        className="footer__btn footer__btn--changelanguage"
+        className="footer__btn footer__btn--changeLanguage"
         onClick={handleChangeLanguage}
       >
-        {buttoncl}
+        {FooterButton}
       </button>
     </div>
   );

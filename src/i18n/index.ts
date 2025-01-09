@@ -4,22 +4,26 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { setDocumentTitle } from '@/utils/setDocumentTitle';
 import commonEN from './locales/en/common.json';
-import commonCN from './locales/zh-TW/common.json';
+import commonZH from './locales/zh-TW/common.json';
 import policyEN from './locales/en/policy.json';
-import policyCN from './locales/zh-TW/policy.json';
+import policyZH from './locales/zh-TW/policy.json';
+import footerEN from './locales/en/footer.json';
+import footerZH from './locales/zh-TW/footer.json';
 
 export enum LanguageType {
   EN = 'en',
-  ZH_TW = 'zh-CN',
+  ZH_TW = 'zh-TW',
 }
 export const resources = {
   [LanguageType.ZH_TW]: {
-    common: commonCN,
-    policy: policyCN,
+    common: commonZH,
+    policy: policyZH,
+    footer: footerZH,
   },
   [LanguageType.EN]: {
     common: commonEN,
     policy: policyEN,
+    footer: footerEN,
   },
 } as const;
 

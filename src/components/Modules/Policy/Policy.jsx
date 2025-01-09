@@ -14,6 +14,7 @@ const Policy = () => {
     );
   };
   const child = PolicyList.map(forMapRule);
+  console.log(PolicyTitle);
   return (
     <div className="policy">
       <div className="policy__wrapper">
