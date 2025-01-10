@@ -9,6 +9,12 @@ import policyEN from './locales/en/policy.json';
 import policyZH from './locales/zh-TW/policy.json';
 import footerEN from './locales/en/footer.json';
 import footerZH from './locales/zh-TW/footer.json';
+import navigationEN from './locales/en/navigation.json';
+import navigationZH from './locales/zh-TW/navigation.json';
+import aboutEN from './locales/en/about.json';
+import aboutZH from './locales/zh-TW/about.json';
+import pageheaderEN from './locales/en/pageheader.json';
+import pageheaderZH from './locales/zh-TW/pageheader.json';
 
 export enum LanguageType {
   EN = 'en',
@@ -19,11 +25,17 @@ export const resources = {
     common: commonZH,
     policy: policyZH,
     footer: footerZH,
+    navigation: navigationZH,
+    about: aboutZH,
+    pageheader: pageheaderZH,
   },
   [LanguageType.EN]: {
     common: commonEN,
     policy: policyEN,
     footer: footerEN,
+    navigation: navigationEN,
+    about: aboutEN,
+    pageheader: pageheaderEN,
   },
 } as const;
 

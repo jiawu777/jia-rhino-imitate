@@ -1,8 +1,10 @@
-import './PageHeader.scss';
 import bgHeader from '@images/pageHeader/1.jpg'; //待解決1：div 的 style 無法使用 background-image
+import { usePageHeaderData } from '@/hooks/usePageHeaderData';
+import './PageHeader.scss';
 
 const PageHeader = () => {
-  const title = '每一個世界 都值得保護';
+  const { PageHeaderTitle } = usePageHeaderData();
+  const title = PageHeaderTitle;
 
   return (
     <section className="pageHeader">

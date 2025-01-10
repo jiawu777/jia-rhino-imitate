@@ -1,34 +1,6 @@
 import { ROUTES } from '@/router';
 
-const NavigationListAbout = [
-  {
-    id: 'n1',
-    title: '關於我們',
-    path: '',
-  },
-  {
-    id: 'n2',
-    title: '環境科技',
-    path: '',
-  },
-  {
-    id: 'n3',
-    title: '材料永續',
-    path: '',
-  },
-  {
-    id: 'n4',
-    title: 'About',
-    path: ROUTES.About,
-  },
-  {
-    id: 'n5',
-    title: 'Policy',
-    path: ROUTES.Policy,
-  },
-];
-
-const NavigationListPolicy = [
+const NavigationList = [
   {
     id: 'n1',
     title: '特別活動',
@@ -56,16 +28,11 @@ const NavigationListPolicy = [
   },
   {
     id: 'n6',
-    title: '永續行動',
-    path: '',
-  },
-  {
-    id: 'n7',
     title: 'About',
     path: ROUTES.About,
   },
   {
-    id: 'n8',
+    id: 'n7',
     title: 'Policy',
     path: ROUTES.Policy,
   },
@@ -80,4 +47,4 @@ const NavigationPic = [
 
 const cursorImg = 'src/assets/images/Header/cursor.png';
 
-export { NavigationListAbout, NavigationListPolicy, NavigationPic, cursorImg };
+export { NavigationList, NavigationPic, cursorImg };

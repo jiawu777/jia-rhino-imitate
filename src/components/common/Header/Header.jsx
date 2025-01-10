@@ -1,5 +1,6 @@
 import { useRouter } from '@/router';
-import { NavigationListPolicy, NavigationPic, cursorImg } from '@/constants/conNavigation';
+import { NavigationList, NavigationPic, cursorImg } from '@/constants/conNavigation';
+import { useNavigationData } from '@/hooks/useNavigationData';
 import './Header.scss';
 import logoFull from '@images/Header/logoFull.svg';
 import logoShort from '@images/Header/logoShort.svg';
@@ -8,6 +9,7 @@ const Header = () => {
   console.log({ cursorImg });
   const router = useRouter();
   const { navigate } = router;
+  const { NavigationListTitle } = useNavigationData();
   const forMapNavigationItem = (item) => {
     return (
       <li
@@ -19,7 +21,7 @@ const Header = () => {
       </li>
     );
   };
-  const childNav = NavigationListPolicy.map(forMapNavigationItem);
+  const childNav = NavigationListTitle.map(forMapNavigationItem);
 
   const forMapNavigationPic = (item) => {
     return (
@@ -53,10 +55,6 @@ const Header = () => {
           </picture>
         </div>
         <div className="header__area  header__area--tool">
-          {/* <img
-            className="header__cursor"
-            src={cursorImg}
-          /> */}
           <ul className="header__menuList">{childNav}</ul>
           <ul className="header__menuList">{childPic}</ul>
         </div>
