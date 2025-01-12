@@ -26,28 +26,26 @@
     align-items: center;
     gap: 0px 40px;
     color: #3c4238;
-    @include pad{
-      flex-direction:column;
+    @include pad {
+      flex-direction: column;
       padding: 60px 20px 0px;
+      gap: 10px;
     }
-    @include phone{
-      flex-direction:column;
+    @include phone {
       padding: 60px 8px 0px;
     }
 
     &--odd {
       flex-direction: row;
-      @include pad{
-        flex-direction:column;
-        gap:10px;
+      @include pad {
+        flex-direction: column;
       }
     }
 
     &--even {
       flex-direction: row-reverse;
-      @include pad{
-        flex-direction:column;
-        gap:10px;
+      @include pad {
+        flex-direction: column;
       }
     }
 
@@ -55,21 +53,19 @@
       background-color: #376242;
       color: #fcfcfe;
       background-image: cover;
-      @include pad{
-        flex-direction:column;
-        gap:10px;
+      @include pad {
+        flex-direction: column;
       }
     }
-
-    
   }
 
   &__desArea {
     display: flex;
     flex-flow: column nowrap;
-    max-width: 445px;
     width: 100%;
-    @include pad{
+    max-width: 445px;
+    @include pad {
+      max-width: 100%;
       gap: 10px;
     }
   }
@@ -91,12 +87,20 @@
     margin: 0;
     padding: 0;
     line-height: 1.5;
+    white-space: pre-wrap;
+    /* 長行會自動換行 */
+    word-wrap: break-word;
+    /* 超出寬度的單詞會換行 */
+    max-width: 100%;
   }
 
   &__imgArea {
     max-width: 445px;
     width: 100%;
     box-sizing: border-box; // 確保寬度計算正確
+    @include pad {
+      max-width: 85%;
+    }
   }
 
   &__img {
@@ -110,25 +114,17 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.4em;
     font-weight: 500;
     color: #5f6858;
     padding: 80px 130px;
     background-color: #fcfcfe;
     line-height: 1.5;
-    @include pad{
+    @include pad {
       padding: 60px 20px 0px;
     }
-    @include phone{
+    @include phone {
       padding: 60px 8px 0px;
     }
   }
-}
-
-p {
-  white-space: pre-wrap;
-  /* 長行會自動換行 */
-  word-wrap: break-word;
-  /* 超出寬度的單詞會換行 */
-  max-width: 100%;
 }

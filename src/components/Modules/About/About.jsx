@@ -1,4 +1,3 @@
-import { sectionList, intro } from '@/constants/conAbout';
 import { useAboutData } from '@/hooks/useAboutData';
 import './About.scss';
 

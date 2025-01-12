@@ -1,9 +1,6 @@
-
-
 .header {
-  cursor: default;
-
   &__wrapper {
+    cursor: default;
     height: 80px;
     display: flex;
     flex-flow: row nowrap;
@@ -16,14 +13,14 @@
     padding-bottom: 0px;
     padding-left: 28px;
     background-color: $colorWhite;
-    @include pad{
+    @include pad {
       flex-flow: row nowrap;
       padding-top: 0px;
       padding-right: 28px;
       padding-bottom: 0px;
       padding-left: 28px;
     }
-    @include phone{
+    @include phone {
       padding: 20px 22px 20px 30px;
     }
   }
@@ -47,15 +44,7 @@
     align-items: center;
     justify-content: space-around;
     height: 80px;
-    cursor: url("src/assets/images/cursor.png") 2 2, pointer;
-
-    &--icon{
-      padding: 8px;
-      gap: 5px;
-      height: 36px;
-      width: 36px;
-      filter: opacity(66%);
-    }
+    cursor: url('@images/cursor.png') 2 2, pointer;
   }
 
   &__menuItem {
@@ -68,22 +57,26 @@
     text-decoration: none;
     line-height: 1.5px;
     color: #5f6858;
-    
-    @include tablet{
+
+    @include tablet {
       display: none;
       padding: 40px 10px;
     }
-    @include pad{
-      padding: 40px 10px;
-    }
 
-    @include phone{
-      display:none;
+    @include phone {
+      display: none;
     }
   }
 
-&__btn{
-  &--about{
+  &__icon {
+    padding: 8px;
+    gap: 5px;
+    height: 36px;
+    width: 36px;
+    filter: opacity(66%);
+  }
+
+  &__btn {
     background-color: #ffef00;
     font-family: 'Inter', Sans-serif;
     font-size: 16px;
@@ -93,6 +86,4 @@
     padding: 8px 16px 8px 16px;
     border-width: 0px;
   }
- 
-}
 }

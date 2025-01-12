@@ -1,5 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '@/router';
+import Imgh1 from '@images/Header/menuIcon/imgh1.png';
+import Imgh2 from '@images/Header/menuIcon/imgh2.png';
+import Imgh3 from '@images/Header/menuIcon/imgh3.png';
+import Imgh4 from '@images/Header/menuIcon/imgh4.png';
 
 const useNavigationData = () => {
   const { t } = useTranslation();
@@ -40,8 +44,16 @@ const useNavigationData = () => {
       path: ROUTES.Policy,
     },
   ];
+  const NavigationPic = [
+    { id: 'n1', img: Imgh1 },
+    { id: 'n2', img: Imgh2 },
+    { id: 'n3', img: Imgh3 },
+    { id: 'n4', img: Imgh4 },
+  ];
+
   return {
     NavigationListTitle,
+    NavigationPic,
   };
 };
 

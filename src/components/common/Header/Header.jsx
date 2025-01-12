@@ -1,15 +1,13 @@
 import { useRouter } from '@/router';
-import { NavigationList, NavigationPic, cursorImg } from '@/constants/conNavigation';
 import { useNavigationData } from '@/hooks/useNavigationData';
 import './Header.scss';
 import logoFull from '@images/Header/logoFull.svg';
 import logoShort from '@images/Header/logoShort.svg';
 
 const Header = () => {
-  console.log({ cursorImg });
   const router = useRouter();
   const { navigate } = router;
-  const { NavigationListTitle } = useNavigationData();
+  const { NavigationListTitle, NavigationPic } = useNavigationData();
   const forMapNavigationItem = (item) => {
     return (
       <li
@@ -27,7 +25,7 @@ const Header = () => {
     return (
       <img
         key={item.id}
-        className="header__menuList--icon"
+        className="header__icon"
         src={item.img}
         width="24px"
         height="24px"

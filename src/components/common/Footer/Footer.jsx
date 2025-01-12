@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="footer__info footer__info--copyright">{FooterCopyright}</div>
       </div>
       <button
-        className="footer__btn footer__btn--changeLanguage"
+        className="footer__btn"
         onClick={handleChangeLanguage}
       >
         {FooterButton}
