@@ -44,7 +44,7 @@ const useNavigationData = () => {
       path: ROUTES.Policy,
     },
   ];
-  const NavigationPic = [
+  const NavigationIcon = [
     { id: 'n1', img: Imgh1 },
     { id: 'n2', img: Imgh2 },
     { id: 'n3', img: Imgh3 },
@@ -53,7 +53,7 @@ const useNavigationData = () => {
 
   return {
     NavigationListTitle,
-    NavigationPic,
+    NavigationIcon,
   };
 };
 

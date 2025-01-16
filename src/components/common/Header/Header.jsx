@@ -7,7 +7,9 @@ import logoShort from '@images/Header/logoShort.svg';
 const Header = () => {
   const router = useRouter();
   const { navigate } = router;
-  const { NavigationListTitle, NavigationPic } = useNavigationData();
+  const { NavigationListTitle, NavigationIcon } = useNavigationData();
+
+  // horizontal navbar titles
   const forMapNavigationItem = (item) => {
     return (
       <li
@@ -21,18 +23,34 @@ const Header = () => {
   };
   const childNav = NavigationListTitle.map(forMapNavigationItem);
 
-  const forMapNavigationPic = (item) => {
+  // vertical select titles
+  const forMapSelectItem = (item, index) => {
+    return (
+      <option
+        className={`header__selectItem`}
+        value={index}
+        onClick={() => navigate(item.path)}
+      >
+        {item.title}
+      </option>
+    );
+  };
+  const childSelect = NavigationListTitle.map(forMapSelectItem);
+
+  // header Icons
+  const forMapIcon = (item, index) => {
     return (
       <img
         key={item.id}
-        className="header__icon"
+        className={`header__icon ${index + 1 === NavigationIcon.length ? 'header__icon--end' : ''}`}
         src={item.img}
         width="24px"
         height="24px"
       />
     );
   };
-  const childPic = NavigationPic.map(forMapNavigationPic);
+  const childIcon = NavigationIcon.map(forMapIcon);
+
   return (
     <section className="header">
       <div className="header__wrapper">
@@ -54,7 +72,10 @@ const Header = () => {
         </div>
         <div className="header__area  header__area--tool">
           <ul className="header__menuList">{childNav}</ul>
-          <ul className="header__menuList">{childPic}</ul>
+          <ul className="header__menuList">{childIcon}</ul>
+          <div className="header__select">
+            <select className="header__select--select">{childSelect}</select>
+          </div>
         </div>
       </div>
     </section>

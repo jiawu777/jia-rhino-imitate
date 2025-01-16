@@ -74,6 +74,12 @@
     height: 36px;
     width: 36px;
     filter: opacity(66%);
+    &--end {
+      display: none;
+      @include pad {
+        display: inline-block;
+      }
+    }
   }
 
   &__btn {
@@ -85,5 +91,18 @@
     border-radius: 999px 999px 999px 999px;
     padding: 8px 16px 8px 16px;
     border-width: 0px;
+  }
+
+  &__select {
+    position: relative;
+    font-family: $fontFamily;
+
+    &--select {
+      display: none;
+    }
+
+    &-selected {
+      background-color: #ffef00;
+    }
   }
 }
