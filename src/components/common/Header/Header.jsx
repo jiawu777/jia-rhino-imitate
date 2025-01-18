@@ -82,12 +82,10 @@ const Header = () => {
         <div className="header__area  header__area--tool">
           <ul className="header__menuList">{childNav}</ul>
           <button className="header__menuList header__btn">{childIcon}</button>
-          <div
-            className={`header__dropdownContainer ${open ? 'header__dropdownContainer--open' : ''}`}
-          >
-            <ul className={`header__dropList`}>{childDrop}</ul>
-          </div>
         </div>
+      </div>
+      <div className={`header__dropdownContainer ${open ? 'header__dropdownContainer--open' : ''}`}>
+        <ul className={`header__dropList`}>{childDrop}</ul>
       </div>
     </section>
   );
