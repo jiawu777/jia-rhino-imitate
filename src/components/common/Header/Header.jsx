@@ -12,8 +12,14 @@ const Header = () => {
 
   // dropdown controller
   const [open, setOpen] = useState(false);
-  const toggleDropOpen = () => {
-    setOpen((open) => !open);
+
+  const closeDrop = () => {
+    setOpen(false);
+  };
+
+  const toggleDrop = () => {
+    const newOpen = !open;
+    setOpen(newOpen);
   };
 
   // vertical dropdown titles
@@ -54,7 +60,7 @@ const Header = () => {
         src={item.img}
         width="24px"
         height="24px"
-        onClick={index + 1 === NavigationIcon.length ? toggleDropOpen : undefined}
+        onClick={index + 1 === NavigationIcon.length ? toggleDrop : undefined}
       />
     );
   };
@@ -62,8 +68,14 @@ const Header = () => {
 
   return (
     <section className="header">
-      <div className="header__wrapper">
-        <div className="header__area header__area--logo">
+      <div
+        className="header__wrapper"
+        onClick={closeDrop}
+      >
+        <div
+          className="header__area header__area--logo"
+          onClick={(e) => e.stopPropagation()}
+        >
           <picture>
             <source
               media="(min-width:1200px)"
@@ -79,7 +91,10 @@ const Header = () => {
             />
           </picture>
         </div>
-        <div className="header__area  header__area--tool">
+        <div
+          className="header__area  header__area--tool"
+          onClick={(e) => e.stopPropagation()}
+        >
           <ul className="header__menuList">{childNav}</ul>
           <button className="header__menuList header__btn">{childIcon}</button>
         </div>
