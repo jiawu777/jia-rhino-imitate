@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useRouter } from '@/router';
 import { useNavigationData } from '@/hooks/useNavigationData';
 import './Header.scss';
@@ -8,6 +9,27 @@ const Header = () => {
   const router = useRouter();
   const { navigate } = router;
   const { NavigationListTitle, NavigationIcon } = useNavigationData();
+
+  // dropdown controller
+  const [open, setOpen] = useState(false);
+  const toggleDropOpen = () => {
+    setOpen((open) => !open);
+  };
+
+  // vertical dropdown titles
+  const forMapSelectItem = (item, index) => {
+    return (
+      <li
+        key={item.id}
+        className={`header__dropdown`}
+        value={index}
+        onClick={() => navigate(item.path)}
+      >
+        {item.title}
+      </li>
+    );
+  };
+  const childDrop = NavigationListTitle.map(forMapSelectItem);
 
   // horizontal navbar titles
   const forMapNavigationItem = (item) => {
@@ -23,21 +45,7 @@ const Header = () => {
   };
   const childNav = NavigationListTitle.map(forMapNavigationItem);
 
-  // vertical select titles
-  const forMapSelectItem = (item, index) => {
-    return (
-      <option
-        className={`header__selectItem`}
-        value={index}
-        onClick={() => navigate(item.path)}
-      >
-        {item.title}
-      </option>
-    );
-  };
-  const childSelect = NavigationListTitle.map(forMapSelectItem);
-
-  // header Icons
+  // header Icon  buttons
   const forMapIcon = (item, index) => {
     return (
       <img
@@ -46,6 +54,7 @@ const Header = () => {
         src={item.img}
         width="24px"
         height="24px"
+        onClick={index + 1 === NavigationIcon.length ? toggleDropOpen : undefined}
       />
     );
   };
@@ -72,9 +81,11 @@ const Header = () => {
         </div>
         <div className="header__area  header__area--tool">
           <ul className="header__menuList">{childNav}</ul>
-          <ul className="header__menuList">{childIcon}</ul>
-          <div className="header__select">
-            <select className="header__select--select">{childSelect}</select>
+          <button className="header__menuList header__btn">{childIcon}</button>
+          <div
+            className={`header__dropdownContainer ${open ? 'header__dropdownContainer--open' : ''}`}
+          >
+            <ul className={`header__dropList`}>{childDrop}</ul>
           </div>
         </div>
       </div>
