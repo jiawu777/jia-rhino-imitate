@@ -24,6 +24,11 @@ const RouterList: Array<iRouter> = [
     needLogin: false,
   },
   {
+    path: ROUTES.Timer,
+    element: loadPage('Timer'),
+    needLogin: false,
+  },
+  {
     path: '/',
     element: (
       <Navigate
