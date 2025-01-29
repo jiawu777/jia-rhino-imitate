@@ -3,7 +3,7 @@ import { useTimerData } from '@/hooks/useTimerData';
 import './Timer.scss';
 
 const Timer = () => {
-  const { TimerStart, TimerStop, TimerReset } = useTimerData();
+  const { TimerStart, TimerStop, TimerReset } = useTimerData(); //改名字 useTimerhook
 
   // Timer Switch
   const [timerSwitch, setTimerSwitch] = useState(false);
@@ -14,23 +14,27 @@ const Timer = () => {
 
   // timing
   const [timer, setTimer] = useState(0);
-  const currentTimer = useRef();
+  const intervalIdTimer = useRef();
+
+  // const refTimer = useRef(0);  //RefTimer可以計時但無法即時渲染畫面，可用於使用者流程計時器提升使用感
 
   useEffect(() => {
     if (timerSwitch) {
-      currentTimer.current = setInterval(() => {
+      intervalIdTimer.current = setInterval(() => {
         setTimer((prevTimer) => prevTimer + 1);
+        // refTimer.current = refTimer.current+1
       }, 1000);
     } else {
-      clearInterval(currentTimer.current);
+      clearInterval(intervalIdTimer.current);
     }
 
     // destroy
-    return () => clearInterval(currentTimer.current);
+    return () => clearInterval(intervalIdTimer.current);
   }, [timerSwitch]);
+
   const resetTimer = () => {
     setTimer(0);
-    clearInterval(currentTimer.current);
+    clearInterval(intervalIdTimer.current);
     setTimerSwitch(false);
   };
 
