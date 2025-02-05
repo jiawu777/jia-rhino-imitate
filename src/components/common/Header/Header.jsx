@@ -99,7 +99,10 @@ const Header = () => {
           <button className="header__menuList header__btn">{childIcon}</button>
         </div>
       </div>
-      <div className={`header__dropdownContainer ${open ? 'header__dropdownContainer--open' : ''}`}>
+      <div
+        className={`header__dropdownContainer ${open ? 'header__dropdownContainer--open' : ''}`}
+        onClick={closeDrop}
+      >
         <ul className={`header__dropList`}>{childDrop}</ul>
       </div>
     </section>

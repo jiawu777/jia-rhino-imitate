@@ -56,7 +56,7 @@ const Timer = () => {
     const userInfo = localStorage.getItem('userInfo')
       ? JSON.parse(localStorage.getItem('userInfo'))
       : [];
-    //如果沒資料就創造一個，預設值0
+    //如果沒資料就創造一個，預設值1
     const hasData = userInfo.find((item) => item.id === currentPage);
     let newUserInfo = [...userInfo];
     if (hasData) {
