@@ -15,8 +15,6 @@ import aboutEN from './locales/en/about.json';
 import aboutZH from './locales/zh-TW/about.json';
 import pageheaderEN from './locales/en/pageheader.json';
 import pageheaderZH from './locales/zh-TW/pageheader.json';
-import timerEN from './locales/en/timer.json';
-import timerZH from './locales/zh-TW/timer.json';
 
 export enum LanguageType {
   EN = 'en',
@@ -30,7 +28,6 @@ export const resources = {
     navigation: navigationZH,
     about: aboutZH,
     pageheader: pageheaderZH,
-    timer: timerZH,
   },
   [LanguageType.EN]: {
     common: commonEN,
@@ -39,7 +36,6 @@ export const resources = {
     navigation: navigationEN,
     about: aboutEN,
     pageheader: pageheaderEN,
-    timer: timerEN,
   },
 } as const;
 
