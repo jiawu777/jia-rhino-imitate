@@ -38,19 +38,19 @@ fetcher.interceptors.response.use(
     const status = error?.response?.status;
     switch (status) {
       case 404:
-        console.error('你要找的页面不存在');
+        console.error('你要找的頁面不存在');
         break;
       case 413:
-        console.error('资料量过大');
+        console.error('資料量過大');
         break;
       case 429:
-        console.error('太多请求');
+        console.error('太多請求');
         break;
       case 403:
-        console.error('服务器上文件或目录拒绝访问');
+        console.error('伺服器文件或目錄拒絕訪問');
         break;
       case 500:
-        console.error('内部服务器错误');
+        console.error('內部伺服器錯誤');
         break;
       default:
     }
