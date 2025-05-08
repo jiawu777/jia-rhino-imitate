@@ -1,13 +1,29 @@
 import { useRef, useEffect } from 'react';
+import { z } from 'zod';
 
+const userInfoSchema = z.array(
+  z.object({
+    id: z.string(),
+    count: z.number(),
+  })
+);
 const usePageVisitTracker = (currentPage) => {
   const firstRender = useRef(true);
-
   const intervalIdTimer = useRef(null);
+
+  //取得userInfo
+  const rawUserInfo = localStorage.getItem('userInfo');
+  let parsedUserInfo = [];
+
+  try {
+    const data = rawUserInfo ? JSON.parse(rawUserInfo) : [];
+    parsedUserInfo = userInfoSchema.parse(data);
+  } catch (error) {
+    console.warn('Invalid userInfo format, resetting to empty array.');
+  }
+
   //如果有userInfo 解開userInfo的JSON檔
-  const userInfoRef = useRef(
-    localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : []
-  );
+  const userInfoRef = useRef(parsedUserInfo);
 
   //更新 localStorage
   const updateLocalStorageData = () => {
