@@ -16,6 +16,7 @@
     }
 
     @include phone {
+      flex-flow: column-reverse nowrap;
       justify-content: center;
     }
   }
@@ -28,6 +29,12 @@
     @include pad {
       flex-flow: column wrap;
       margin: auto;
+    }
+
+    &--copyright{
+      @include phone{
+            font-size: 11.5px;
+      }
     }
   }
 

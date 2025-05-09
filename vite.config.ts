@@ -26,7 +26,9 @@ const DROP_CONSOLE_MODES = ['beta', 'demo']; // ANCHOR 設定清除 console 的�
 const ENABLE_V_CONSOLE_MODES = ['dev']; // ANCHOR 設定開啟 vConsole 的環境
 
 export default defineConfig(({ mode }) => {
-  const basePath = mode === 'development' ? '/' : `/frontend/${mode}/wap/`;
+  const basePath = './';
+  // const basePath = mode === 'development' ? '/' : `/frontend/${mode}/wap/`;
+
   return {
     base: basePath,
     server: {
