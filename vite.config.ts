@@ -135,7 +135,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
-      outDir: 'build',
+      outDir: 'dist',
     },
     esbuild: {
       drop: DROP_CONSOLE_MODES.includes(mode) ? ['console', 'debugger'] : [],
