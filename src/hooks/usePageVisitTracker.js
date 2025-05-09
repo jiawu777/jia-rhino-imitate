@@ -46,11 +46,6 @@ const usePageVisitTracker = (currentPage) => {
         localStorage.setItem('userInfo', JSON.stringify(userInfoRef.current));
       }, 5000);
     };
-    //如果非第一次執行就return不運作
-    if (firstRender.current) {
-      firstRender.current = false;
-      return;
-    }
 
     updateLocalStorageData();
 
