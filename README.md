@@ -56,20 +56,20 @@ npm install
 
 ---
 
-## 📸 頁面截圖（可自行補圖）
+## 📸 頁面截圖
 
 ### 🌟 首頁頁面（About us）
 
-![About us](@/assets/images/screenshots/about.png)
+![About us](./src/assets/images/screenshots/about.png)
 
 ### 📜 網站使用條款
 
-![Policy](@/assets/images/screenshots/policy.png)
+![Policy](./src/assets/images/screenshots/policy.png)
 
 ### 📱 手機模式側邊選單
 
-![Mobile Menu](@/assets/images/screenshots/mobile-menu.png)
+![Mobile Menu](./src/assets/images/screenshots/mobile-menu.png)
 
 ### 🌐 中英切換功能
 
-![Change Language](@/assets/images/screenshots/language-toggle.png)
+![Change Language](./src/assets/images/screenshots/language-toggle.png)
